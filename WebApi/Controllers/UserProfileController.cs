@@ -14,8 +14,7 @@ namespace WebApi.Controllers
     [ApiController]
     public class UserProfileController : ControllerBase
     {
-        //[Route("api/[controller]")]
-        //[ApiController]
+        
 
         private UserManager<ApplicationUser> _userManager;
         public UserProfileController(UserManager<ApplicationUser> userManager)

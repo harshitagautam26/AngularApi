@@ -18,7 +18,7 @@ namespace WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BadRequestObjectResult : ControllerBase
+    public class ApplicationUserController : ControllerBase
     {
         private UserManager<ApplicationUser> _userManager;
         private SignInManager<ApplicationUser> _singInManager;
@@ -26,7 +26,7 @@ namespace WebApi.Controllers
 
         private readonly ApplicationSettings _appSettings;
 
-        public BadRequestObjectResult(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<ApplicationSettings> appSettings)
+        public ApplicationUserController(UserManager<ApplicationUser> userManager, SignInManager<ApplicationUser> signInManager, IOptions<ApplicationSettings> appSettings)
         {
             _userManager = userManager;
             _singInManager = signInManager;
